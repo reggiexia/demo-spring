@@ -1,3 +1,6 @@
+spring:
+  profiles:
+    active: test
 security:
   user:
     password: password
@@ -12,6 +15,3 @@ security:
 server:
   port: 8001
   context-path: /uaa
-logging:
-  level:
-    org.springframework.security: DEBUG

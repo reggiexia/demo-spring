@@ -67,9 +67,4 @@ public class ResApplication extends ResourceServerConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/api/**").access("#oauth2.hasScope('write')");
     }
 
-    @Profile("!cloud")
-    @Bean
-    RequestDumperFilter requestDumperFilter() {
-        return new RequestDumperFilter();
-    }
 }
