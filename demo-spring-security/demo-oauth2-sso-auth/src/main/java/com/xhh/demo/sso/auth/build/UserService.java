@@ -1,4 +1,4 @@
-package com.xhh.demo.sso.auth.test;
+package com.xhh.demo.sso.auth.build;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -28,15 +28,8 @@ public class UserService {
 
     private List<User> queryAll() {
         List<User> users = new ArrayList<>();
-        User l = new User();
-        l.setUserName("lufei");
-        l.setPassword("password");
-        users.add(l);
-
-        User z = new User();
-        z.setUserName("zhuoluo");
-        z.setPassword("password");
-        users.add(z);
+        users.add(new User("lufei", "password"));
+        users.add(new User("zhuoluo", "password"));
         return users;
     }
 }

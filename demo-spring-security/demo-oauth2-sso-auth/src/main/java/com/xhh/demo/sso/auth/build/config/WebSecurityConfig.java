@@ -1,4 +1,4 @@
-package com.xhh.demo.sso.auth.test.config;
+package com.xhh.demo.sso.auth.build.config;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.Configuration;
@@ -19,12 +19,12 @@ import javax.servlet.http.HttpServletRequest;
  * @author 扶苏
  * @version 1.0.0 createTime: 2017/4/20 上午9:47
  */
-@Profile("test")
+@Profile("build")
 @Log4j2
 @RestController
 public class WebSecurityConfig {
 
-    @Profile("test")
+    @Profile("build")
     @Configuration
     static class MvcConfig extends WebMvcConfigurerAdapter {
 
@@ -36,7 +36,7 @@ public class WebSecurityConfig {
     }
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    @PreAuthorize("authenticated and hasPermission('read', 'view')")
+    @PreAuthorize("hasPermission('read', 'view')")
     public ModelAndView hello(HttpServletRequest request, ModelAndView modelAndView) {
 //        String username = SecurityContextHolder.getContext().getAuthentication().getName();
         String username = request.getRemoteUser();

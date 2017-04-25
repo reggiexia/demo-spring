@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: test
+    active: build
 security:
   user:
     password: password
@@ -14,4 +14,4 @@ security:
       check-token-access: permitAll()
 server:
   port: 8001
-  context-path: /uaa
+  context-path: /auth

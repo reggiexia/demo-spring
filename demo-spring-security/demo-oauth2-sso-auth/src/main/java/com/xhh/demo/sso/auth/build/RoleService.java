@@ -1,4 +1,4 @@
-package com.xhh.demo.sso.auth.test;
+package com.xhh.demo.sso.auth.build;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;

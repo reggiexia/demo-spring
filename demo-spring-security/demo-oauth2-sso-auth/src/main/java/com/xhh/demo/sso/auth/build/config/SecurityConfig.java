@@ -1,4 +1,4 @@
-package com.xhh.demo.sso.auth.test.config;
+package com.xhh.demo.sso.auth.build.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +8,6 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
  * Security 配置
@@ -16,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  * @author 扶苏
  * @version 1.0.0 createTime: 2017/4/20 下午8:40
  */
-@Profile("test")
+@Profile("build")
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -30,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .formLogin().loginPage("/login").permitAll()
                 .and()
-                .logout().logoutUrl("/logout")
+                .logout().clearAuthentication(true).invalidateHttpSession(true)
                 .and()
 //                .requestMatchers()
 //                .antMatchers("/", "/login", "/oauth/authorize", "/oauth/confirm_access")

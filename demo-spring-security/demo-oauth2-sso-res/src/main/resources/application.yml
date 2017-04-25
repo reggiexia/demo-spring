@@ -4,7 +4,7 @@ server:
 security:
   oauth2:
     resource:
-      token-info-uri: ${auth-server:http://localhost:8001/uaa}/oauth/check_token
+      token-info-uri: ${auth-server:http://localhost:8001/auth}/oauth/check_token
     client:
       client-id: demo
       client-secret: demo

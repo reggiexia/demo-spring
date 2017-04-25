@@ -1,8 +1,6 @@
-package com.xhh.demo.sso.auth.test;
+package com.xhh.demo.sso.auth.build;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 /**
  * 用户信息
@@ -13,6 +11,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     private String userName;

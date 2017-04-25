@@ -1,9 +1,10 @@
-package com.xhh.demo.sso.auth.test.config;
+package com.xhh.demo.sso.auth.build.config;
 
-import com.xhh.demo.sso.auth.test.RoleService;
-import com.xhh.demo.sso.auth.test.User;
-import com.xhh.demo.sso.auth.test.UserService;
+import com.xhh.demo.sso.auth.build.RoleService;
+import com.xhh.demo.sso.auth.build.User;
+import com.xhh.demo.sso.auth.build.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
@@ -16,6 +17,7 @@ import java.io.Serializable;
  * @author 扶苏
  * @version 1.0.0 createTime: 2017/4/20 下午7:08
  */
+@Profile("build")
 @Component
 public class AuthPermissionEvaluator implements PermissionEvaluator {
 

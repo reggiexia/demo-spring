@@ -1,4 +1,4 @@
-auth-server: http://localhost:8001/uaa
+auth-server: http://localhost:8001/auth
 
 server:
   port: 8003
@@ -14,9 +14,6 @@ security:
       scope: read, write
     resource:
       token-info-uri: ${auth-server}/oauth/check_token
-logging:
-  level:
-    org.springframework.security: DEBUG
 spring:
   jackson:
     date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat

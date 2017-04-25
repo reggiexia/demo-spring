@@ -1,10 +1,11 @@
-package com.xhh.demo.sso.auth.test.config;
+package com.xhh.demo.sso.auth.build.config;
 
-import com.xhh.demo.sso.auth.test.RoleService;
-import com.xhh.demo.sso.auth.test.User;
-import com.xhh.demo.sso.auth.test.UserService;
+import com.xhh.demo.sso.auth.build.RoleService;
+import com.xhh.demo.sso.auth.build.User;
+import com.xhh.demo.sso.auth.build.UserService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -24,6 +25,7 @@ import java.util.Set;
  * @version 1.0.0 createTime: 2017/4/20 上午10:39
  */
 @Log4j2
+@Profile("build")
 @Component
 public class AuthUserDetailsService implements UserDetailsService {
 
