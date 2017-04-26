@@ -74,7 +74,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>tigerforest</finalName>
+        <finalName>demo-spring</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

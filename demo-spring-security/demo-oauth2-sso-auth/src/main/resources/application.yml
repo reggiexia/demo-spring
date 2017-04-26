@@ -1,6 +1,9 @@
 spring:
   profiles:
     active: build
+  devtools:
+    restart:
+      enabled: false
 security:
   user:
     password: password
