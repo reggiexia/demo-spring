@@ -1,5 +1,6 @@
 package com.xhh.demo.sso.auth.build.config;
 
+import org.apache.catalina.filters.RequestDumperFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -48,5 +49,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public InMemoryTokenStore inMemoryTokenStore() {
         return new InMemoryTokenStore();
+    }
+
+    @Bean
+    RequestDumperFilter requestDumperFilter() {
+        return new RequestDumperFilter();
     }
 }
