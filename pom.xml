@@ -12,6 +12,7 @@
 
     <modules>
         <module>demo-spring-security</module>
+        <module>demo-spring-prometheus</module>
     </modules>
 
     <properties>
@@ -29,6 +30,8 @@
 
         <thymeleaf.version>3.0.5.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.2.1</thymeleaf-layout-dialect.version>
+
+        <prometheus.version>0.0.26</prometheus.version>
     </properties>
 
     <dependencyManagement>
@@ -69,6 +72,12 @@
                 <groupId>org.thymeleaf</groupId>
                 <artifactId>thymeleaf-spring4</artifactId>
                 <version>${thymeleaf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.prometheus</groupId>
+                <artifactId>simpleclient_spring_boot</artifactId>
+                <version>${prometheus.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

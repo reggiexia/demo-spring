@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,10 +31,10 @@ public class ApiController {
     @RequestMapping(path = "api/messages", method = RequestMethod.GET)
     List<Message> getMessages(@RequestParam("token") String token) {
         if (inMemoryTokenStore.readAccessToken(token) == null) {
-            log.debug("----------------");
+            log.debug("readAccessToken null");
         }
         if (inMemoryTokenStore.readAccessToken(token).isExpired()) {
-            log.debug("expired !!!!!!!!!!");
+            log.debug("expired !");
         }
         return messages;
     }

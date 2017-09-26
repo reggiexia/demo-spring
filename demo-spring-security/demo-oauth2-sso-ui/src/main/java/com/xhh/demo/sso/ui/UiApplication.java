@@ -56,7 +56,6 @@ public class UiApplication {
 
         @RequestMapping("/")
         String home(Model model) {
-            log.debug("===========");
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("http://localhost:8001/auth/")
                     .addConverterFactory(JacksonConverterFactory.create())
@@ -67,7 +66,7 @@ public class UiApplication {
             Call<List<Message>> call = messageClient.get(token);
             try {
                 List<Message> list = call.execute().body();
-                log.debug("-------: {}", list.toString());
+                log.debug("Messages: {}", list.toString());
                 model.addAttribute("messages", list);
             } catch (IOException e) {
                 e.printStackTrace();
