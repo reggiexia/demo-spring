@@ -1,5 +1,8 @@
 package com.xhh.demo.prometheus.controller;
 
+import com.xhh.demo.prometheus.metric.WarnGaugeMetric;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
+    @Autowired
+    private WarnGaugeMetric warnGaugeMetric;
+
     @RequestMapping("/")
     public String home() {
         return "Hello HOME";
@@ -20,5 +26,11 @@ public class MainController {
     @RequestMapping("/message")
     public String message() {
         return "Hello INFO";
+    }
+
+    @RequestMapping("/warn/{num}")
+    public String warn(@PathVariable("num") double num) {
+        warnGaugeMetric.processRequest(num);
+        return "warn";
     }
 }

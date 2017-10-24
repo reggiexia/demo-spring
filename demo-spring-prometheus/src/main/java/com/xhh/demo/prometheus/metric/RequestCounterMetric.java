@@ -4,21 +4,23 @@ import io.prometheus.client.Counter;
 import org.springframework.stereotype.Component;
 
 /**
- * 请求指标
+ * prometheus counter 示例
+ *
+ * counter 计数器，只累加
  *
  * @author 扶苏
- * @version 1.0.0 createTime: 2017/9/26 下午4:50
+ * @version 1.0.0 createTime: 2017/10/11 下午2:35
  */
 @Component
-public class RequestMetric {
+public class RequestCounterMetric {
 
     public static final Counter requests = Counter.build()
             .name("requests_total")
             .help("Total requests.")
-            .labelNames("method")
+            .labelNames("method", "aaa")
             .register();
 
     public void processRequest(String method){
-        requests.labels(method.toUpperCase()).inc();
+        requests.labels(method.toUpperCase(), "bbb").inc();
     }
 }

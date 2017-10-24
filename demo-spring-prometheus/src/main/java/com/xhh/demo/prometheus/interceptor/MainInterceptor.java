@@ -1,6 +1,7 @@
 package com.xhh.demo.prometheus.interceptor;
 
-import com.xhh.demo.prometheus.metric.RequestMetric;
+import com.xhh.demo.prometheus.metric.RequestCounterMetric;
+import com.xhh.demo.prometheus.metric.RequestGaugeMetric;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,11 +21,17 @@ import javax.servlet.http.HttpServletResponse;
 public class MainInterceptor extends HandlerInterceptorAdapter {
 
     @Autowired
-    private RequestMetric requestMetric;
+    private RequestCounterMetric requestCounterMetric;
+
+    @Autowired
+    private RequestGaugeMetric requestGaugeMetric;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
-        requestMetric.processRequest(request.getMethod());
+        requestCounterMetric.processRequest("get");
+        requestCounterMetric.processRequest("post");
+        requestGaugeMetric.processRequest("get");
+        requestGaugeMetric.processRequest("post");
         return true;
     }
 
