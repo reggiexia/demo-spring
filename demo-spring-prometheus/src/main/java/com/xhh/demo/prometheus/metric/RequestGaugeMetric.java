@@ -16,7 +16,7 @@ import java.util.Random;
 @Component
 public class RequestGaugeMetric {
 
-    public static final Gauge requests = Gauge.build()
+    private static final Gauge requests = Gauge.build()
             .name("requests_int")
             .help("Request int value")
             .labelNames("method")

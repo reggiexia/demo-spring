@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class RequestCounterMetric {
 
-    public static final Counter requests = Counter.build()
+    private static final Counter requests = Counter.build()
             .name("requests_total")
             .help("Total requests.")
             .labelNames("method", "aaa")

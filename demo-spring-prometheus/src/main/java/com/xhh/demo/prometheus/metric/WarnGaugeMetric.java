@@ -16,7 +16,7 @@ import java.util.Random;
 @Component
 public class WarnGaugeMetric {
 
-    public static final Gauge requests = Gauge.build()
+    private static final Gauge requests = Gauge.build()
             .name("warn_or_not")
             .help("Warn or not")
             .labelNames("method")
