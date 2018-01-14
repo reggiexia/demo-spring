@@ -13,7 +13,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @author 扶苏
  * @version 1.0.0 createTime: 17/11/2016 7:30 PM
  */
-@Component
 @Configuration
 public class WebAppConfigurer extends WebMvcConfigurerAdapter {
 
@@ -22,7 +21,7 @@ public class WebAppConfigurer extends WebMvcConfigurerAdapter {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(mainInterceptor).addPathPatterns("/**");
+//        registry.addInterceptor(mainInterceptor).addPathPatterns("/**");
     }
 
 }

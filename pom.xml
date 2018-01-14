@@ -13,6 +13,7 @@
     <modules>
         <module>demo-spring-security</module>
         <module>demo-spring-prometheus</module>
+        <module>demo-spring-sqlite</module>
     </modules>
 
     <properties>
