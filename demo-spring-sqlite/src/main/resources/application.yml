@@ -1,7 +1,4 @@
-spring:
-  devtools:
-    restart:
-      enabled: false
 server:
   port: 8001
-  context-path: /demo
+  servlet:
+    context-path: /demo

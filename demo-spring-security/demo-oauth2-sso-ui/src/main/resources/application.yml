@@ -3,8 +3,6 @@ auth-server: http://localhost:8001/auth
 server:
   port: 8003
 security:
-  basic:
-    enabled: false
   oauth2:
     client:
       client-id: demo

@@ -17,4 +17,5 @@ security:
       check-token-access: permitAll()
 server:
   port: 8001
-  context-path: /auth
+  servlet:
+    context-path: /demo
