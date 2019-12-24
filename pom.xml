@@ -15,6 +15,7 @@
         <module>demo-spring-prometheus</module>
         <module>demo-spring-sqlite</module>
         <module>demo-spring-cloud</module>
+        <module>demo-spring-resilience4j</module>
     </modules>
 
     <properties>
