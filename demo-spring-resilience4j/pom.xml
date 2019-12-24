@@ -14,6 +14,7 @@
     <modules>
         <module>demo-cloud-resilience4j-client</module>
         <module>demo-cloud-resilience4j-server</module>
+        <module>demo-boot-resilience4j</module>
     </modules>
 
 
