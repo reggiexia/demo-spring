@@ -16,6 +16,7 @@
         <module>demo-spring-sqlite</module>
         <module>demo-spring-cloud</module>
         <module>demo-spring-resilience4j</module>
+        <module>demo-spring-feign</module>
     </modules>
 
     <properties>

@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: v1
+
+---
+spring:
+  profiles: v1
+api:
+  url: http://localhost:8080
+server:
+  port: 8001
+---
+spring:
+  profiles: v2
+api:
+  url: http://demo-server:8080
+server:
+  port: 8001

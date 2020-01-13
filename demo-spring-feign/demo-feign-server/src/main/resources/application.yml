@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: v1
+
+---
+spring:
+  profiles: v1
+api:
+  version: v1
+
+---
+spring:
+  profiles: v2
+api:
+  version: v2
+
+---
+spring:
+  profiles: v3
+api:
+  version: v3
+
