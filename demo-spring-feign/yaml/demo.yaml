@@ -1,0 +1,149 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-server
+  labels:
+    app: demo-server
+    service: demo-server
+spec:
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: demo-server
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: demo-server
+  labels:
+    account: demo-server
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-server-v1
+  labels:
+    app: demo-server
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-server
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: demo-server
+        version: v1
+    spec:
+      serviceAccountName: demo-server
+      containers:
+      - name: demo-server
+        image: 192.168.56.102:30002/library/demo-server:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-server-v2
+  labels:
+    app: demo-server
+    version: v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-server
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: demo-server
+        version: v2
+    spec:
+      serviceAccountName: demo-server
+      containers:
+      - name: demo-server
+        image: 192.168.56.102:30002/library/demo-server:v2
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-server-v3
+  labels:
+    app: demo-server
+    version: v3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-server
+      version: v3
+  template:
+    metadata:
+      labels:
+        app: demo-server
+        version: v3
+    spec:
+      serviceAccountName: demo-server
+      containers:
+      - name: demo-server
+        image: 192.168.56.102:30002/library/demo-server:v3
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-client
+  labels:
+    app: demo-client
+    service: demo-client
+spec:
+  ports:
+  - port: 8001
+    name: http
+  selector:
+    app: demo-client
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: demo-client
+  labels:
+    account: demo-client
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-client-v1
+  labels:
+    app: demo-client
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-client
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: demo-client
+        version: v1
+    spec:
+      serviceAccountName: demo-client
+      containers:
+      - name: demo-client
+        image: 192.168.56.102:30002/library/demo-client:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8001
