@@ -33,11 +33,6 @@ public class DemoExceptionHandler {
             }
 
             @Override
-            public String code() {
-                return "10000";
-            }
-
-            @Override
             public String message() {
                 return HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase();
             }
@@ -57,7 +52,6 @@ public class DemoExceptionHandler {
 
         return ResponseEntity
                 .status(errorMetaData.status())
-                .body(new ApiError(errorMetaData.status(), errorMetaData.code(), ex.getMessage(),
-                        errorMetaData.reference()));
+                .body(new ApiError(errorMetaData.status(), ex.getMessage(), errorMetaData.reference()));
     }
 }

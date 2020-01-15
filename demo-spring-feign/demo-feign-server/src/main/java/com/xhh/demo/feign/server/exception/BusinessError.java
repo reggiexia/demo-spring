@@ -31,11 +31,6 @@ public @interface BusinessError {
     int status() default 500;
 
     /**
-     * a string which represented an error of the business
-     */
-    String code() default "100000";
-
-    /**
      * a human readable message indicated what's the error meaning
      *
      */
