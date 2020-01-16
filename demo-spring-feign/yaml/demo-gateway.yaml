@@ -26,6 +26,10 @@ spec:
     - match:
         - uri:
             exact: /version
+        - uri:
+            prefix: /api
+        - uri:
+            prefix: /user
       route:
         - destination:
             host: demo-client
