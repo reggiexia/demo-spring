@@ -35,3 +35,4 @@ spec:
             host: demo-client
             port:
               number: 8001
+      timeout: 2s
