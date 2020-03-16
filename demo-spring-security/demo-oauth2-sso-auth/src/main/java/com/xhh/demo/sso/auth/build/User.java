@@ -5,7 +5,7 @@ import lombok.*;
 /**
  * 用户信息
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/4/20 下午1:58
  */
 @Getter

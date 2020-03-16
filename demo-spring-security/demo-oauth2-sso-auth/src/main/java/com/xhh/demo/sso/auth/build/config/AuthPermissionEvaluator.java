@@ -14,7 +14,7 @@ import java.io.Serializable;
 /**
  * 配置许可处理
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/4/20 下午7:08
  */
 @Profile("build")

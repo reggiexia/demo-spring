@@ -21,7 +21,7 @@ import java.util.Set;
 /**
  * 配置用户处理
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/4/20 上午10:39
  */
 @Log4j2

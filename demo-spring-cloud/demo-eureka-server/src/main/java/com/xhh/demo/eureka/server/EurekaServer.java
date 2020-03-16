@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 /**
  * eureka server
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2019-12-24 14:20
  */
 @EnableEurekaServer

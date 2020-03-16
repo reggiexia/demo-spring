@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * gauge 值可以累加，可以减小
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/10/11 下午3:17
  */
 @Component

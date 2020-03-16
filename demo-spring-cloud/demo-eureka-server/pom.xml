@@ -20,6 +20,7 @@
     </dependencies>
 
     <build>
+        <finalName>demo-eureka-server</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>

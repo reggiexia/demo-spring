@@ -3,14 +3,12 @@ package com.xhh.demo.prometheus.metric;
 import io.prometheus.client.Gauge;
 import org.springframework.stereotype.Component;
 
-import java.util.Random;
-
 /**
  * prometheus gauge 示例
  *
  * gauge 值可以累加，可以减小
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/10/11 下午3:17
  */
 @Component

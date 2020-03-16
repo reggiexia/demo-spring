@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * WebSecurity 配置
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/4/20 上午9:47
  */
 @Profile("build")

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 权限拦截
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 17/11/2016 7:34 PM
  */
 @Log4j2

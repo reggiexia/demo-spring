@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * SSO UI
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/4/17 下午3:14
  */
 @Log4j2

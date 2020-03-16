@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * 启动入口
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/4/17 下午3:03
  */
 @SpringBootApplication

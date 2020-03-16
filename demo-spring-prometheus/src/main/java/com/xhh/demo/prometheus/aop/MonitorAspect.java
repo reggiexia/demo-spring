@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * 切面
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/10/30 上午9:55
  */
 @Log4j2

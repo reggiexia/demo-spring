@@ -11,7 +11,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 /**
  * 数据源
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2018/1/9 下午4:34
  */
 @EnableTransactionManagement

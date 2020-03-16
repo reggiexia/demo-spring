@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * SSO 资源
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/4/17 下午3:03
  */
 @SpringBootApplication

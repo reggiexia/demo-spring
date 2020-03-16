@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * 角色
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/4/20 下午4:30
  */
 @Log4j2

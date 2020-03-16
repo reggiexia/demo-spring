@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * 用户
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2018/1/9 下午4:51
  */
 @Getter

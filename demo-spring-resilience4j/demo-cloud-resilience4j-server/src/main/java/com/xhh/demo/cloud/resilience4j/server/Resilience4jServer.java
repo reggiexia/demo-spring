@@ -7,7 +7,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 /**
  * resilience4j server
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2019-12-24 16:51
  */
 @EnableConfigServer

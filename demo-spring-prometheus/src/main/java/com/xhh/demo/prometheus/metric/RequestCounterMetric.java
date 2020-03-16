@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  *
  * counter 计数器，只累加
  *
- * @author 扶苏
+ * @author tiger
  * @version 1.0.0 createTime: 2017/10/11 下午2:35
  */
 @Component

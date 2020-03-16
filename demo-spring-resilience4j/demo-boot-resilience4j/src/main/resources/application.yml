@@ -75,7 +75,7 @@ resilience4j.retry:
         backendA:
             maxRetryAttempts: 3
         backendB:
-            maxRetryAttempts: 3
+            maxRetryAttempts: 4
 resilience4j.bulkhead:
     configs:
         default:
