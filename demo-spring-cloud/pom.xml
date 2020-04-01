@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>demo-eureka-server</module>
+        <module>demo-lettuce-redis</module>
     </modules>
 
     <dependencyManagement>
