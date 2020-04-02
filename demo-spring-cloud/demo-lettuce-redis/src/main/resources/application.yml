@@ -2,13 +2,17 @@ spring:
   application:
     name: lettuce-redis
   redis:
-    host: localhost
+    cluster:
+      nodes: localhost:7001,localhost:7002,localhost:7003,localhost:7005,localhost:7004,localhost:7006
+      max-redirects: 5
+    #    host: localhost
     lettuce:
       pool:
         max-active: 8 #最大连接数
         max-wait: -1 #默认-1 最大连接阻塞等待时间
         max-idle: 8 #最大空闲连接 默认8
         min-idle: 0 #最小空闲连接
+    timeout: 5000
 
 server:
   port: 8080
