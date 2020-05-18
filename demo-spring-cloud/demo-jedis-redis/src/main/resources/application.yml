@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: lettuce-redis
+  redis:
+    cluster:
+      nodes: localhost:7001,localhost:7002,localhost:7003,localhost:7005,localhost:7004,localhost:7006
+      max-redirects: 5
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 2
+    timeout: 1000
+
+server:
+  port: 8080

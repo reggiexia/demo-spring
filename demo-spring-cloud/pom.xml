@@ -13,6 +13,7 @@
     <modules>
         <module>demo-eureka-server</module>
         <module>demo-lettuce-redis</module>
+        <module>demo-jedis-redis</module>
     </modules>
 
     <dependencyManagement>

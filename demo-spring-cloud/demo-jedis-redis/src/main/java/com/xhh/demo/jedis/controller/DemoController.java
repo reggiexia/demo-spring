@@ -1,4 +1,4 @@
-package com.xhh.demo.lettuce.controller;
+package com.xhh.demo.jedis.controller;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
