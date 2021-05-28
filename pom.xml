@@ -17,6 +17,7 @@
         <module>demo-spring-cloud</module>
         <module>demo-spring-resilience4j</module>
         <module>demo-spring-feign</module>
+        <module>demo-multi-datasource</module>
     </modules>
 
     <properties>
